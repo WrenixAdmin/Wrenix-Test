@@ -38,6 +38,13 @@ const ComingSoonPage: React.FC = () => {
                     className="absolute right-[5rem] bottom-[6.5rem] text-[#484848] text-right font-ar-one-sans text-[3.125rem] font-medium leading-[3.125rem]">
                     We are <span className="text-[#FFBF18]">cooking</span> a<br/> <span className="text-[#4F48EC]">New Look.</span>
                 </div>
+                <div className="flex py-5 pb-3 flex-col justify-center items-center gap-2.5 self-stretch">
+                    <div className="flex flex-col items-center gap-2.5">
+                        <p className="text-[#2A2A2A] text-center font-inter text-[0.9375rem] font-medium leading-normal">
+                            All Right Reserved by Wrenix | © Wrenix 2025
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     );
