@@ -10,6 +10,7 @@ const ComingSoonPage: React.FC = () => {
     return (
         <div
             className="flex w-screen h-screen flex-col justify-between items-center bg-white overflow-hidden pointer-events-none">
+
             <div className="flex flex-col justify-between items-center flex-1 self-stretch">
                 <div className="flex px-5 py-3 justify-between items-start self-stretch">
                     <Image src={logo} alt={'logo'} width={200} height={150}/>
