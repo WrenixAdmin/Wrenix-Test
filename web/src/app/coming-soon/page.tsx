@@ -32,11 +32,11 @@ const ComingSoonPage: React.FC = () => {
                     Wrenix
                 </h1>
                 <p
-                    className="absolute left-[28.5rem] top-[13rem] text-[#484848] text-center font-ar-one-sans text-[5rem] font-medium leading-[3.125rem]">
+                    className="absolute left-[28.5rem] top-[11rem] text-[#484848] text-center font-ar-one-sans text-[5rem] font-medium leading-[3.125rem]">
                     It<span className="text-[#FFBF18]">’</span>s a New Year
                 </p>
                 <div
-                    className="absolute right-[5rem] bottom-[6.5rem] text-[#484848] text-right font-ar-one-sans text-[3.125rem] font-medium leading-[3.125rem]">
+                    className="absolute right-[5rem] bottom-[5rem] text-[#484848] text-right font-ar-one-sans text-[3.125rem] font-medium leading-[3.125rem]">
                     We are <span className="text-[#FFBF18]">cooking</span> a<br/> <span className="text-[#4F48EC]">New Look.</span>
                 </div>
                 <div className="flex py-5 pb-3 flex-col justify-center items-center gap-2.5 self-stretch">
