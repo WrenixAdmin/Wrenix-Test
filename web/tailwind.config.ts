@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        'ar-one-sans': ['"Ar One Sans"', 'sans-serif'],
+      }
     },
   },
   plugins: [],

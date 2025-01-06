@@ -1,0 +1,7 @@
+.heading {
+    font-size: 28.5rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 3px #484848;
+    opacity: 50%;
+}
