@@ -33,15 +33,15 @@ const ComingSoonPage: React.FC = () => {
                     className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col gap-0 justify-center items-end">
                     <div className="flex flex-col pt-[10vh] -mb-[2vh]">
                         <p
-                            className="text-[#484848] text-center font-ar-one-sans text-[4.5vw] font-medium leading-[3.125rem]">
+                            className="text-[#484848] text-center font-ar-one-sans text-[5.5vw] font-medium leading-[3.125rem]">
                             It<span className="text-[#FFBF18]">’</span>s a New Year
                         </p>
-                        <h1 className={`text-center font-inter md:text-[29vw] leading-[21.875rem] -mt-[10vh] ${styles.heading}`}>
+                        <h1 className={`text-center font-inter md:text-[29.5vw] leading-[21.875rem] -mt-[10vh] ${styles.heading}`}>
                             Wrenix
                         </h1>
                     </div>
                     <p
-                        className="text-[#484848] text-right font-ar-one-sans text-[3vw] font-medium leading-[3.125rem]">
+                        className="text-[#484848] text-right font-ar-one-sans text-[3.5vw] font-medium leading-[3.125rem] pr-[4rem]">
                         We are <span className="text-[#FFBF18]">cooking</span> a<br/> <span className="text-[#4F48EC]">New Look.</span>
                     </p>
                 </div>
