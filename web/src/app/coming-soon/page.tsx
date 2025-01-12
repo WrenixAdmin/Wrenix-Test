@@ -11,7 +11,8 @@ const ComingSoonPage: React.FC = () => {
         <div
             className="flex w-screen h-screen flex-col justify-between items-center bg-white overflow-hidden pointer-events-none">
 
-            <div className="flex flex-col justify-between items-center flex-1 self-stretch">
+            {/* Large Display Version */}
+            <div className="hidden lg:flex flex-col justify-between items-center flex-1 self-stretch">
                 <div className="flex px-5 py-3 justify-between items-start self-stretch">
                     <Image src={logo} alt={'logo'} width={200} height={150}/>
                     <div
@@ -28,16 +29,21 @@ const ComingSoonPage: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                <h1 className={`absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center font-inter leading-[21.875rem] ${styles.heading}`}>
-                    Wrenix
-                </h1>
-                <p
-                    className="absolute left-[28.5rem] top-[12rem] text-[#484848] text-center font-ar-one-sans text-[5rem] font-medium leading-[3.125rem]">
-                    It<span className="text-[#FFBF18]">’</span>s a New Year
-                </p>
                 <div
-                    className="absolute right-[5rem] bottom-[5.5rem] text-[#484848] text-right font-ar-one-sans text-[3.125rem] font-medium leading-[3.125rem]">
-                    We are <span className="text-[#FFBF18]">cooking</span> a<br/> <span className="text-[#4F48EC]">New Look.</span>
+                    className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col gap-0 justify-center items-end">
+                    <div className="flex flex-col pt-[10vh] -mb-[2vh]">
+                        <p
+                            className="text-[#484848] text-center font-ar-one-sans text-[4.5vw] font-medium leading-[3.125rem]">
+                            It<span className="text-[#FFBF18]">’</span>s a New Year
+                        </p>
+                        <h1 className={`text-center font-inter md:text-[29vw] leading-[21.875rem] -mt-[10vh] ${styles.heading}`}>
+                            Wrenix
+                        </h1>
+                    </div>
+                    <p
+                        className="text-[#484848] text-right font-ar-one-sans text-[3vw] font-medium leading-[3.125rem]">
+                        We are <span className="text-[#FFBF18]">cooking</span> a<br/> <span className="text-[#4F48EC]">New Look.</span>
+                    </p>
                 </div>
                 <div className="flex py-5 pb-3 flex-col justify-center items-center gap-2.5 self-stretch">
                     <div className="flex flex-col items-center gap-2.5">
