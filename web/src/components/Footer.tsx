@@ -9,6 +9,7 @@ const Footer: React.FC = () => {
           <li><a href="#" className="text-foreground hover:text-gray-500">Privacy Policy</a></li>
           <li><a href="#" className="text-foreground hover:text-gray-500">Terms of Service</a></li>
           <li><a href="#" className="text-foreground hover:text-gray-500">Contact</a></li>
+          <li><a href="#" className="text-foreground hover:text-gray-500">Social Media</a></li>
         </ul>
       </div>
     </footer>
