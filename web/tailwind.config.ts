@@ -14,6 +14,7 @@ export default {
       },
       fontFamily: {
         'ar-one-sans': ['"Ar One Sans"', 'sans-serif'],
+        'inter': ['"Inter"', 'sans-serif'],
       }
     },
   },
