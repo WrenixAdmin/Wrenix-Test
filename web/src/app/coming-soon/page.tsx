@@ -9,7 +9,7 @@ import {MdEmail, MdNavigateNext} from "react-icons/md";
 const ComingSoonPage: React.FC = () => {
     return (
         <div
-            className="flex w-screen h-screen flex-col justify-between items-center bg-white overflow-hidden pointer-events-none">
+            className={`flex w-screen h-screen flex-col justify-between items-center bg-white overflow-hidden pointer-events-none`}>
 
             {/* Large Display Version */}
             <div className="hidden lg:flex flex-col justify-between items-center flex-1 self-stretch">
