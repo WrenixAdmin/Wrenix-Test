@@ -3,6 +3,8 @@ import Image from 'next/image';
 
 import styles from './comingSoon.module.css';
 
+import EmailBtn from '@/components/util/emailbtn';
+
 import logo from '/public/logo.png'
 import {MdEmail, MdNavigateNext} from "react-icons/md";
 
@@ -64,19 +66,7 @@ const ComingSoonPage: React.FC = () => {
                         <h1 className="text-[#484848] leading-10">For</h1>
                         <h1 className="text-[#FFBF18]">New <span className="text-[#4F48EC]">Year</span></h1>
                     </div>
-                    <div
-                        className="flex px-2.5 py-2 items-center gap-2 rounded-full bg-[#100E34] shadow-md cursor-default pointer-events-none">
-                        <div
-                            className="flex px-1 py-1 flex-col justify-center items-center gap-2.5 rounded-full bg-white">
-                            <MdEmail className="text-[#100e34] text-2xl"/>
-                        </div>
-                        <div className="flex justify-center items-center">
-                            <p className="text-white text-center font-ar-one-sans text-[1rem] font-medium leading-[0.9375rem] pointer-events-none">
-                                hello@wrenix.com
-                            </p>
-                            <MdNavigateNext className="text-white text-2xl"/>
-                        </div>
-                    </div>
+                    <EmailBtn email="hello@wrenix.com" />
                 </div>
                 <p className="text-[#2A2A2A] text-center font-inter text-[0.9rem] font-medium leading-normal">
                     All Right Reserved by Wrenix | © Wrenix 2025

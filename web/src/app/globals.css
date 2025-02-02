@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ar+One+Sans:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,33 +19,33 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Ar One Sans', sans-serif;
 }
 
 @font-face {
-  font-family: 'ar-one-sans';
-  src: url('/fonts/arOneSans/AROneSans-Regular.ttf') format('ttf');
+  font-family: 'Ar One Sans';
+  src: url('/fonts/arOneSans/AROneSans-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ar-one-sans';
-  src: url('/fonts/arOneSans/AROneSans-Medium.ttf') format('ttf');
+  font-family: 'Ar One Sans';
+  src: url('/fonts/arOneSans/AROneSans-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ar-one-sans';
-  src: url('/fonts/arOneSans/AROneSans-Bold.ttf') format('ttf');
+  font-family: 'Ar One Sans';
+  src: url('/fonts/arOneSans/AROneSans-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ar-one-sans';
-  src: url('/fonts/arOneSans/AROneSans-SemiBold.ttf') format('ttf');
+  font-family: 'Ar One Sans';
+  src: url('/fonts/arOneSans/AROneSans-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }

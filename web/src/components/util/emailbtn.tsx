@@ -1,21 +1,23 @@
 import React from 'react';
+import { MdEmail, MdNavigateNext } from 'react-icons/md';
 
-interface EmailBtnProps {
+interface EmailDisplayProps {
     email: string;
-    subject?: string;
-    body?: string;
 }
 
-const EmailBtn: React.FC<EmailBtnProps> = ({ email, subject = '', body = '' }) => {
-    const handleClick = () => {
-        const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        window.location.href = mailtoLink;
-    };
-
+const EmailBtn: React.FC<EmailDisplayProps> = ({ email }) => {
     return (
-        <button onClick={handleClick}>
-            Send Email
-        </button>
+        <div className="flex max-w-fit px-2.5 py-2 items-center gap-2 rounded-full bg-[#100E34] shadow-md cursor-pointer">
+            <div className="flex px-1 py-1 flex-col justify-center items-center gap-2.5 rounded-full bg-white">
+                <MdEmail className="text-[#100e34] text-2xl" />
+            </div>
+            <div className="flex justify-center items-center">
+                <p className="text-white text-center font-ar-one-sans text-[1rem] font-medium leading-[0.9375rem] pointer-events-none">
+                    {email}
+                </p>
+                <MdNavigateNext className="text-white text-2xl" />
+            </div>
+        </div>
     );
 };
 
