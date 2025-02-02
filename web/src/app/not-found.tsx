@@ -5,7 +5,6 @@ import NotifyMePage from "@/components/pageSections/NotifyMePage";
 const NotFound: React.FC = () => {
     return (
         <div>
-            <Navbar/>
             <NotifyMePage/>
         </div>
     );

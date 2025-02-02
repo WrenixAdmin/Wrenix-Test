@@ -1,26 +1,31 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import {usePathname} from "next/navigation";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { Analytics } from "@vercel/analytics/react";
+import {Analytics} from "@vercel/analytics/react";
 
-export default function ClientLayout({ children }: { children: React.ReactNode }) {
-  const router = useRouter();
-  const isComingSoonPage = router.pathname === "/coming-soon";
+export default function ClientLayout({children}: { children: React.ReactNode }) {
+    const pathname = usePathname();
+    const isComingSoonPage = pathname === "/coming-soon";
 
-  return (
-    <>
-      {isComingSoonPage ? (
-        children
-      ) : (
+    if (isComingSoonPage) {
+        return (
+            <>
+                {children}
+                <Analytics/>
+            </>
+        )
+    }
+
+    return (
         <>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
+            <div className="flex flex-col min-h-screen justify-between">
+                <Navbar/>
+                <main>{children}</main>
+                <Footer/>
+                <Analytics/>
+            </div>
         </>
-      )}
-      <Analytics />
-    </>
-  );
+    );
 }
