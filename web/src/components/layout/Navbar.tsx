@@ -12,9 +12,9 @@ import {
   FaTiktok,
 } from "react-icons/fa6";
 
-const Navbar: React.FC = () => {
+const Navbar: React.FC = () => {  
   return (
-    <div className="w-screen p-[2rem] flex items-csenter justify-between bg-transparent backdrop-blur-sm fixed">
+    <div className="w-screen px-[2rem] py-[1rem] flex items-center justify-between bg-transparent backdrop-blur-sm fixed">
       <Link href={"/"}>
         <Image src={Logo} alt="Wrenix logo" width={150} />
       </Link>

@@ -22,7 +22,7 @@ export default function ClientLayout({children}: { children: React.ReactNode }) 
         <>
             <div className="flex flex-col min-h-screen justify-between">
                 <Navbar/>
-                <main>{children}</main>
+                <main className="">{children}</main>
                 <Footer/>
                 <Analytics/>
             </div>

@@ -8,13 +8,14 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      colors:{
+        wrenixYellow: '#ffbf18',
+        wrenixBlue: '#4f48ec',
+        wrenixGray: '#484848',
       },
       fontFamily: {
         'ar-one-sans': ['"Ar One Sans"', 'sans-serif'],
-        'inter': ['"Inter"', 'sans-serif'],
+        'inter': "var(--font-inter), sans-serif",
       }
     },
   },
