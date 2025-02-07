@@ -18,10 +18,11 @@ const Navbar: React.FC = () => {
       <Link href={"/"}>
         <Image src={Logo} alt="Wrenix logo" width={150} />
       </Link>
-      <nav className="flex py-[1rem] px-[2rem] justify-center items-center gap-[1.2rem] rounded-[6rem] bg-[#100e34] shadow-[2px_6px_4px_0px_rgba(0,0,0,0.25)] text-white text-center  font-ar-one-sans text-[1rem] font-medium">
+      <nav className="flex py-[1rem] px-[2rem] justify-center items-center gap-[2rem] rounded-[6rem] bg-[#100e34] shadow-[2px_6px_4px_0px_rgba(0,0,0,0.25)] text-white text-center  font-ar-one-sans text-[1rem] font-medium">
+        <Link href={"/about"}>About Us</Link>
         <Link href={"/projects"}>Projects</Link>
         <Link href={"/services"}>Services</Link>
-        <Link href={"/join-us"}>Join Us</Link>
+        <Link href={"/join-us"}>Careers</Link>
         <Link href={"/contact-us"}>Contact Us</Link>
       </nav>
       <nav className="flex gap-[0.5rem] text-[#100E34]">
