@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
         <Link href={"/projects"}>Projects</Link>
         <Link href={"/services"}>Services</Link>
         <Link href={"/join-us"}>Careers</Link>
-        <Link href={"/contact-us"}>Contact Us</Link>
+        <Link href={"/contactUs"}>Contact Us</Link>
       </nav>
       <nav className="flex gap-[0.5rem] text-[#100E34]">
         <Link

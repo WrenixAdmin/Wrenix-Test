@@ -56,7 +56,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <Link href="/contact-us">
+        <Link href="/contactUs">
           <div className="cursor-pointer flex items-center space-x-2 bg-white border rounded-full px-4 py-2">
             <span className="text-lg">Contact Us</span>
             <IoIosSend className="text-2xl" />
