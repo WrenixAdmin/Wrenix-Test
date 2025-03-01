@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       {/* Desktop Design */}
-      <div className="w-screen px-[2rem] py-[1rem] flex items-center justify-between bg-transparent backdrop-blur-sm fixed">
+      <div className="w-screen px-[2rem] py-[1rem] flex items-center justify-between bg-transparent  fixed z-10">
         <Link href={"/"}>
           <Image src={Logo} alt="Wrenix logo" width={150} />
         </Link>

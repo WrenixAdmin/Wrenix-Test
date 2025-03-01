@@ -12,6 +12,7 @@ export default {
         wrenixYellow: '#ffbf18',
         wrenixBlue: '#4f48ec',
         wrenixGray: '#484848',
+        wrenixDarkBlue: '#100E34',
       },
       fontFamily: {
         'ar-one-sans': ['"Ar One Sans"', 'sans-serif'],
