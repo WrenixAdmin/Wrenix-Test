@@ -3,12 +3,12 @@
 import React from "react";
 import Lottie from "lottie-react";
 
-// Importing the animaitons
-import DigitalMarketing from "/public/animation/DigitalMarketing.json";
-import GraphicDesign from "/public/animation/GraphicDesigning.json";
-import MobileDevelopment from "/public/animation/MobileDevelopment.json";
-import WebDesign from "/public/animation/UIUX.json";
-import WebDevelopment from "/public/animation/WebDevelopment.json";
+// Importing the animations
+import DigitalMarketing from "../../../../public/animation/DigitalMarketing.json";
+import GraphicDesign from "../../../../public/animation/GraphicDesigning.json";
+import MobileDevelopment from "../../../../public/animation/MobileDevelopment.json";
+import WebDesign from "../../../../public/animation/UIUX.json";
+import WebDevelopment from "../../../../public/animation/WebDevelopment.json";
 
 const AboutHero: React.FC = () => {
   return (
