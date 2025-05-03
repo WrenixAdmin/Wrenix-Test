@@ -57,7 +57,7 @@ export default {
   		},
   		fontFamily: {
   			'ar-one-sans': [
-  				'Ar One Sans"',
+  				'Ar One Sans',
   				'sans-serif'
   			],
   			inter: 'var(--font-inter), sans-serif'
