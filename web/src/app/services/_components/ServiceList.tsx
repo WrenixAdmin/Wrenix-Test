@@ -47,23 +47,23 @@ const Service = ({ number, title, description, isReversed = false }: ServiceProp
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
-      className={`flex flex-col md:flex-row items-center gap-6 md:gap-12 my-16 md:my-[10rem] ${
+      className={`flex flex-col md:flex-row items-center gap-4 sm:gap-6 md:gap-12 my-8 sm:my-12 md:my-16 lg:my-[10rem] ${
         isReversed ? "md:flex-row-reverse" : ""
       }`}
     >
       <motion.div
         variants={itemVariants}
-        className={`text-amber-400 text-[120px] md:text-[180px] font-bold leading-none ${
+        className={`text-amber-400 text-[80px] sm:text-[120px] md:text-[180px] font-bold leading-none ${
           isReversed ? "md:text-right" : "md:text-left"
         }`}
       >
         {number}
       </motion.div>
       <div className={`flex-1 ${isReversed ? "md:text-right" : "md:text-left"}`}>
-        <motion.h2 variants={itemVariants} className="text-wrenixBlue text-3xl md:text-[3rem] font-bold mb-4">
+        <motion.h2 variants={itemVariants} className="text-wrenixBlue text-2xl sm:text-3xl md:text-[3rem] font-bold mb-2 sm:mb-4">
           {title}
         </motion.h2>
-        <motion.p variants={itemVariants} className="text-wrenixDarkBlue mx-auto w-full md:text-[1.2rem] md:mx-0">
+        <motion.p variants={itemVariants} className="text-wrenixDarkBlue mx-auto w-full text-sm sm:text-base md:text-[1.2rem] md:mx-0">
           {description}
         </motion.p>
       </div>
@@ -122,7 +122,7 @@ export default function ServicesList() {
   }
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-2 sm:px-4">
       <motion.div initial="hidden" animate="visible" variants={containerVariants}>
         {services.map((service, index) => (
           <Service
@@ -137,4 +137,3 @@ export default function ServicesList() {
     </div>
   )
 }
-

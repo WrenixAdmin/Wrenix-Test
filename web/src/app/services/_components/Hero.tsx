@@ -119,14 +119,14 @@ const Hero: React.FC = () => {
   return (
     <section
       id="contact_hero"
-      className="flex h-[100vh] justify-center items-center"
+      className="flex h-[90vh] md:h-[100vh] justify-center items-center"
     >
       {/* Background Canvas */}
       <canvas ref={canvasRef} id="hero-canvas" className="absolute inset-0" />
 
-      <h2 className="text-[6.5rem] font-[500] text-center text-wrenixGray w-[70vw]">
-        We are always <span className="text-wrenixYellow">Ready</span> <br />
-        to take a <br />
+      <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-[6.5rem] font-[500] text-center text-wrenixGray w-full px-4 sm:w-[90vw] md:w-[80vw] lg:w-[70vw]">
+        We are always <span className="text-wrenixYellow">Ready</span> <br className="hidden sm:block" />
+        to take a <br className="hidden sm:block" />
         <span className="text-wrenixBlue">Perfect Shot.</span>
       </h2>
     </section>
