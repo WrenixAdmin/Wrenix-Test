@@ -22,9 +22,12 @@ const Hero: React.FC = () => {
     setCanvasDimensions();
     window.addEventListener("resize", setCanvasDimensions);
 
-    // Create particles
+    // Create particles - adjust count based on screen width
     const particlesArray: Particle[] = [];
-    const numberOfParticles = Math.min(100, Math.floor(canvas.width / 10));
+    const numberOfParticles = Math.min(
+      80,
+      Math.floor(canvas.width / (window.innerWidth < 768 ? 20 : 10))
+    );
 
     class Particle {
       x: number;
@@ -73,14 +76,16 @@ const Hero: React.FC = () => {
     const connectParticles = () => {
       if (!ctx) return;
 
+      const connectionDistance = window.innerWidth < 768 ? 80 : 100;
+
       for (let a = 0; a < particlesArray.length; a++) {
         for (let b = a; b < particlesArray.length; b++) {
           const dx = particlesArray[a].x - particlesArray[b].x;
           const dy = particlesArray[a].y - particlesArray[b].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) {
-            const opacity = 1 - distance / 100;
+          if (distance < connectionDistance) {
+            const opacity = 1 - distance / connectionDistance;
             ctx.strokeStyle = `rgba(94, 96, 206, ${opacity * 0.2})`;
             ctx.lineWidth = 1;
             ctx.beginPath();
@@ -116,16 +121,20 @@ const Hero: React.FC = () => {
   return (
     <section
       id="contact_hero"
-      className="flex h-[100vh] justify-center items-center"
+      className="flex h-[100vh] justify-center items-center overflow-hidden"
     >
       {/* Background Canvas */}
       <canvas ref={canvasRef} className="absolute inset-0" />
 
-      <h2 className="text-[6.5rem] font-[500] text-center text-wrenixGray w-[70vw]">
-        We are always <span className="text-wrenixYellow">Ready</span> <br />
-        to take a <br />
-        <span className="text-wrenixBlue">Perfect Shot.</span>
-      </h2>
+      <div className="relative z-10 px-4 md:px-8">
+        <h2 className="text-[2rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[6.5rem]
+                       font-[500] text-center text-wrenixGray w-full sm:w-[90vw] md:w-[85vw] lg:w-[70vw] mx-auto
+                       leading-tight sm:leading-tight md:leading-tight">
+          We are always <span className="text-wrenixYellow">Ready</span> <br className="hidden sm:block" />
+          to take a <br className="hidden sm:block" />
+          <span className="text-wrenixBlue">Perfect Shot.</span>
+        </h2>
+      </div>
     </section>
   );
 };
