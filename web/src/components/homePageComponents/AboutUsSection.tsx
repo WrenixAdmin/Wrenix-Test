@@ -17,33 +17,36 @@ const ServiceCard = ({ icon, title, description, index }: ServiceCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, x: 50 }}
-      animate={{ opacity: 1, x: 0 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
       transition={{
         duration: 0.5,
         delay: index * 0.2,
-        ease: [0.21, 1.11, 0.81, 0.99], // spring-like easing
+        ease: [0.21, 1.11, 0.81, 0.99],
       }}
     >
       <Card className="overflow-hidden">
-        <CardContent className="p-6">
-          <div className="flex items-center gap-[2rem]">
+        <CardContent className="p-4 md:p-6">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-[2rem]">
             <motion.div
               initial={{ scale: 0.5, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{
                 duration: 0.5,
                 delay: index * 0.2 + 0.3,
                 ease: "easeOut",
               }}
-              className="mt-1 p-4 text-[3rem] font-bold flex items-center justify-center rounded-full bg-amber-100 text-amber-400"
+              className="p-3 md:p-4 text-2xl md:text-[3rem] font-bold flex items-center justify-center rounded-full bg-amber-100 text-amber-400 shrink-0"
             >
               {icon}
             </motion.div>
             <div>
               <motion.h3
-                className="text-[3rem] font-semibold mb-2 text-wrenixBlue"
+                className="text-2xl md:text-3xl lg:text-[3rem] font-semibold mb-1 md:mb-2 text-wrenixBlue"
                 initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{
                   duration: 0.5,
                   delay: index * 0.2 + 0.4,
@@ -52,9 +55,10 @@ const ServiceCard = ({ icon, title, description, index }: ServiceCardProps) => {
                 {title}
               </motion.h3>
               <motion.p
-                className="text-muted-foreground"
+                className="text-sm md:text-base text-muted-foreground"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{
                   duration: 0.5,
                   delay: index * 0.2 + 0.5,
@@ -72,17 +76,17 @@ const ServiceCard = ({ icon, title, description, index }: ServiceCardProps) => {
 
 const services = [
   {
-    icon: <FaPencilAlt className="w-6 h-6 text-amber-400" />,
+    icon: <FaPencilAlt className="w-5 h-5 md:w-6 md:h-6 text-amber-400" />,
     title: "We Design",
     description: "Stunning, Modern web solutions that capture attention and convert visitors to clients.",
   },
   {
-    icon: <FaCog className="w-6 h-6 text-amber-400" />,
+    icon: <FaCog className="w-5 h-5 md:w-6 md:h-6 text-amber-400" />,
     title: "We Develop",
     description: "Secure, High-Performance web solutions built for speed and reliability.",
   },
   {
-    icon: <FaTruck className="w-6 h-6 text-amber-400" />,
+    icon: <FaTruck className="w-5 h-5 md:w-6 md:h-6 text-amber-400" />,
     title: "We Deliver",
     description: "On time, Every time, Ensuring your project launches smoothly and flawlessly.",
   },
@@ -103,41 +107,43 @@ export default function WrenixIntro() {
   }
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-10 md:py-16 lg:py-24">
       <div className="container px-4 mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Left Column - Heading */}
-          <div className="max-w-xl">
+          <div className="max-w-xl mx-auto lg:mx-0">
             <motion.div
               initial="hidden"
-              animate="visible"
-              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight flex flex-wrap items-baseline gap-x-4"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              className="text-center lg:text-left font-bold leading-tight"
             >
-              <div className="flex items-baseline gap-x-4 text-[9rem]">
-                <motion.span custom={0} variants={letterAnimation} className="text-wrenixGray">
+              <div className="flex flex-wrap justify-center lg:justify-start items-baseline gap-x-2 md:gap-x-4">
+                <motion.span custom={0} variants={letterAnimation} className="text-4xl sm:text-6xl md:text-7xl lg:text-[9rem] text-wrenixGray">
                   We
                 </motion.span>
-                <motion.span custom={1} variants={letterAnimation} className="text-wrenixGray">
+                <motion.span custom={1} variants={letterAnimation} className="text-4xl sm:text-6xl md:text-7xl lg:text-[9rem] text-wrenixGray">
                   are
                 </motion.span>
               </div>
-              <div className="flex items-baseline text-[10rem]">
-                <motion.span custom={2} variants={letterAnimation} className="text-wrenixBlue">
+              <div className="flex flex-wrap justify-center lg:justify-start items-baseline">
+                <motion.span custom={2} variants={letterAnimation} className="text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] text-wrenixBlue">
                   Wreni
                 </motion.span>
-                <motion.span custom={3} variants={letterAnimation} className="text-wrenixYellow">
+                <motion.span custom={3} variants={letterAnimation} className="text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] text-wrenixYellow">
                   x
                 </motion.span>
-                <motion.span custom={4} variants={letterAnimation} className="text-wrenixYellow">
+                <motion.span custom={4} variants={letterAnimation} className="text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] text-wrenixYellow">
                   ,
                 </motion.span>
               </div>
             </motion.div>
 
             <motion.div
-              className="h-1 w-24 bg-wrenixBlue mt-6"
+              className="h-1 bg-wrenixBlue mt-4 md:mt-6 mx-auto lg:mx-0"
               initial={{ width: 0 }}
-              animate={{ width: 450 }}
+              whileInView={{ width: "80%" }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{
                 duration: 1,
                 delay: 1,
@@ -147,7 +153,7 @@ export default function WrenixIntro() {
           </div>
 
           {/* Right Column - Service Cards */}
-          <div className="space-y-6">
+          <div className="space-y-4 md:space-y-6 mt-8 lg:mt-0">
             {services.map((service, index) => (
               <ServiceCard
                 key={index}
@@ -163,4 +169,3 @@ export default function WrenixIntro() {
     </section>
   )
 }
-

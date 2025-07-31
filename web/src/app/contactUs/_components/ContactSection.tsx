@@ -4,7 +4,7 @@ import ContactDetail from "./ContactDetail";
 
 const ContactSection: React.FC = () => {
   return (
-    <div className="flex w-[70vw] m-auto min-h-screen items-center justify-between gap-[10rem]">
+    <div className="flex flex-col lg:flex-row w-[90vw] md:w-[85vw] lg:w-[80vw] xl:w-[70vw] mx-auto py-12 md:py-16 items-center justify-between gap-6 md:gap-8 lg:gap-10">
       <ContactForm />
       <ContactDetail />
     </div>
